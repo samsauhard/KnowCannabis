@@ -1,0 +1,96 @@
+﻿@model KnowCannabis.Models.Cannabis
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cannabis</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PostedBy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PostedBy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PostedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PostedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Thc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Thc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cbd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cbd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SideEffects)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SideEffects)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.High)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.High)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PainReliever)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PainReliever)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EaseMigraine)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EaseMigraine)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReduceAnxiety)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReduceAnxiety)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IncreaseApetite)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IncreaseApetite)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

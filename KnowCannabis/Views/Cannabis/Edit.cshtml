@@ -1,0 +1,117 @@
+﻿@model KnowCannabis.Models.Cannabis
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Cannabis</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.Id)
+
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" readonly/>
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Type" class="control-label"></label>
+                <input asp-for="Type" class="form-control" />
+                <span asp-validation-for="Type" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Thc" class="control-label"></label>
+                <input asp-for="Thc" class="form-control" />
+                <span asp-validation-for="Thc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cbd" class="control-label"></label>
+                <input asp-for="Cbd" class="form-control" />
+                <span asp-validation-for="Cbd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SideEffects" class="control-label"></label>
+                <input asp-for="SideEffects" class="form-control" />
+                <span asp-validation-for="SideEffects" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="High" class="control-label"></label>
+                <select asp-for="High" class="form-control">
+
+                    <option selected>Select a type</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+                <span asp-validation-for="High" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PainReliever" class="control-label"></label>
+                <select asp-for="PainReliever" class="form-control">
+
+                    <option selected>Select a type</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+                <span asp-validation-for="PainReliever" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EaseMigraine" class="control-label"></label>
+                <select asp-for="EaseMigraine" class="form-control">
+
+                    <option selected>Select a type</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+
+                <span asp-validation-for="EaseMigraine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReduceAnxiety" class="control-label"></label>
+                <select asp-for="ReduceAnxiety" class="form-control">
+
+                    <option selected>Select a type</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+
+                <span asp-validation-for="ReduceAnxiety" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IncreaseApetite" class="control-label"></label>
+                <select asp-for="IncreaseApetite" class="form-control">
+
+                    <option selected>Select a type</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+
+                <span asp-validation-for="IncreaseApetite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
